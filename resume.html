@@ -1,63 +1,137 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./resume.css">
+    <script src="//at.alicdn.com/t/font_451959_w77svjtsgyv0wwmi.js"></script>
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
 </head>
-<body> 
-    <div class="topNavBar clearfix">
-       <a href="#" class="logo" alt="logo" style="float:left">
-           <span class="rs">RS</span><span class="card">card</span>
-       </a>
-        <nav style="float: right;">
-        <ul class="clearfix">
-            <li ><a href="#" >关于</a></li>
-            <li ><a href="#" >技能</a></li>
-            <li ><a href="#" >经验</a></li>
-            <li ><a href="#" >博客</a></li>
-            <li ><a href="#" >日历</a></li>
-            <li ><a href="#" >联系</a></li>
-            <li ><a href="#" >其他</a></li>
-            <li ><a href="#" >所有作品</a></li>
-        </ul>
-    </nav>
+
+<body>
+    <div class="topNavBar ">
+        <div class="topNavBar-inner clearfix">
+            <a href="#" class="logo" alt="logo" style="float:left">
+                <span class="rs">RS</span>
+                <span class="card">card</span>
+            </a>
+            <nav style="float: right;">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">关于</a>
+                    </li>
+                    <li>
+                        <a href="#">技能</a>
+                    </li>
+                    <li>
+                        <a href="#">经验</a>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                    </li>
+                    <li>
+                        <a href="#">日历</a>
+                    </li>
+                    <li>
+                        <a href="#">联系</a>
+                    </li>
+                    <li>
+                        <a href="#">其他</a>
+                    </li>
+                    <li>
+                        <a href="#">所有作品</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="banner" style="backgtound-image: url(#)"></div>
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
     <main>
-    <div class="card">
-        <div class="picture">
-        <img src="#" alt="photo">
+        <div class="usercard clearfix">
+            <div class="usercardfile">
+                <div class="picture" style="float:left">
+                    <img src="./robert.jpg" alt="photo" height="347px" width="299px">
+                </div>
+                <div class="text">
+                    <span class="hello">hello
+                        <span class="triangle"></span>
+                    </span>
+                    <h1>张科家</h1>
+                    <p>前端开发工程师</p>
+                    <hr>
+                    <dl>
+                        <dt>年龄</dt>
+                        <dd>22</dd>
+                        <dt>所在城市</dt>
+                        <dd>湖北随州</dd>
+                        <dt>邮箱</dt>
+                        <dd>18771964684@163.com</dd>
+                        <dt>手机</dt>
+                        <dd>18771964684</dd>
+                    </dl>
+                </div>
+            </div>
+            <footer class="media">
+                <!-- <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tuite_twitter"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>-->
+            </footer>
         </div>
-        <div class="text">
-            <div class="resume">
-            <span class="hello">hello</span>
-            <h1>我是张科家</h1>
-            <hr>
-            <dl>
-                <dt>年龄</dt>
-                <dd>22</dd>
-                <dt>所在城市</dt>
-                <dd>湖北随州</dd>
-                <dt>邮箱</dt>
-                <dd>18771964684@163.com</dd>
-                <dt>手机</dt>
-                <dd>18771964684</dd>
-            </dl>
+        <a class="button" href="#">下载简历</a>
+        <p>我的自我介绍和情况。</p>
+    </main>
+    <section>
+        <h2>技能</h2>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>PHP</li>
+            <li>Jacascript</li>
+            <li>node</li>
+            <li>vue</li>
+        </ol>
+    </section>
+    <section>
+        <h2>作品</h2>
+        <nav>
+            <ol>
+                <li>所有</li>
+                <li>框架</li>
+                <li>原生js</li>
+            </ol>
+        </nav>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    <div>
-    <footer class="media">
-        <a href="#"><img src="#" alt=""></a>
-        <a href="#"><img src="" alt=""></a>
-        <a href="#"><img src="" alt=""></a>
-        <a href="#"><img src="" alt=""></a>
-        <a href="#"><img src="" alt=""></a>
-        <a href="#"><img src="" alt=""></a>
-        <a href="#"><img src="" alt=""></a>
-    </footer>
-    </div>
-    </div>
+
+    </section>
 </body>
+
 </html>
