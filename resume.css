@@ -119,7 +119,7 @@ a{
     padding-top: 30px;
 }
 .usercard .text hr{
-    weight:0;
+    height:0px;
     border: none;
     border-top: 1px solid #dedede;
    margin-top: 20px;
