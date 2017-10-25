@@ -1,0 +1,32 @@
+.yinyang {
+	width: 124px;
+	height: 62px;
+	background: #eee;
+	border-color: pink;
+	border-style: solid;
+	border-width: 2px 2px 70px 2px;
+	border-radius: 100%;
+	position: relative;
+}
+.yinyang:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background: #eee;
+	border: 28px solid pink;
+	border-radius: 100%;
+	width: 6px;
+	height: 6px;
+}
+.yinyang:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: pink;
+	border: 28px solid #eee;
+	border-radius:100%;
+	width: 6px;
+	height: 6px;
+}
