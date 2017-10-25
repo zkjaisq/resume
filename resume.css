@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #efefef;
 
 }
 *{
@@ -84,8 +85,7 @@ a{
     background-color: #ffffff;
 }
 .pictureAndtext{
-    padding-top: 50px;
-    padding-left: 50px;
+    padding: 50px;
 }
  .picture{
      float:left;
@@ -113,6 +113,7 @@ a{
 .usercard .text{
     float:left;
     width: 470px;
+    margin-bottom: 20px;
 }
 .usercard .text h1{
     padding-top: 30px;
@@ -146,17 +147,17 @@ a{
 .usercard .footer a{
     display: inline-block;
     border-radius: 50%;
-    width: 50px;
+    width: 40px;
     padding: 5px 0px;
-    line-height: 40px;
+    line-height: 30px;
     margin: 16px;
 }
 .usercard .footer a:hover{
     background-color: #cf5d5f;
 }
 .usercard svg{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     fill: white;
     vertical-align: top;
 
