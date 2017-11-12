@@ -51,7 +51,7 @@ while(index< keys['length']){
         div2.appendChild(buttom3)
         div1.appendChild(div2)
         //点击屏幕的时候，输入一个网址，将网址储存在浏览器中。
-        edit.onclick = function(xzkjcnxlkcjlk){
+        buttom1.onclick = function(xzkjcnxlkcjlk){
             key = xzkjcnxlkcjlk['target']['id']
             x =prompt('给我一个网址')
             hash[key] = x
@@ -61,7 +61,8 @@ while(index< keys['length']){
     }
     
     index=index+1
-} document.onkeypress = function(xzkjcnxlkcjlk){
+}
+ document.onkeypress = function(xzkjcnxlkcjlk){
    key = xzkjcnxlkcjlk['key']
    website =hash[key]
    console.log(website)
