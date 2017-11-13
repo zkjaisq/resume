@@ -30,32 +30,52 @@ index=0
 while(index< keys['length']){
     div1 = document.createElement('div') 
     main.appendChild(div1)
-    row=keys[index]
+    row = keys[index]
     index2=0
     while(index2< row['length']){
         div2 = document.createElement('kbd')
+        span = document.createElement('span')
         div1.appendChild(div2)
-        div2.textContent = row[index2]
-        div2.id= row[index2]
-        buttom1 = document.createElement('span') //生成button标签，
+        div2.appendChild(span)
+        span.textContent = row[index2]
+        span.className = "text"
+        div2.className = "key"
+        buttom1 = document.createElement('button') //生成button标签，
         div2.appendChild(buttom1)
         div1.appendChild(div2)
         buttom2 = document.createElement('span') //生成button标签，
         div2.appendChild(buttom2)
         div1.appendChild(div2)
+        buttom1.textContent = 'E'
+        buttom1.id = row[index2]
         buttom2.textContent ='D'
         buttom2.id = "delete"
-        buttom1.textContent = 'E'
-        buttom1.id = 'edit'
        buttom3 = document.createElement('img')
         div2.appendChild(buttom3)
         div1.appendChild(div2)
+        if(hash[row[index2]]){
+            buttom3.src = 'http://'+hash[row[index2]] + './favicon.ico'
+        }else{
+            buttom3.src = 'https://i.loli.net/2017/11/13/5a092f5e689ec.png'
+        }
+        buttom3.onerror = function(xxx){
+            xxx.target.src = 'https://i.loli.net/2017/11/13/5a092f5e689ec.png'
+        }//监听报错时间，如果报错就还是将我们的图片给它。
         //点击屏幕的时候，输入一个网址，将网址储存在浏览器中。
         buttom1.onclick = function(xzkjcnxlkcjlk){
-            key = xzkjcnxlkcjlk['target']['id']
-            x =prompt('给我一个网址')
+            button = xzkjcnxlkcjlk['target']
+            button3 = button.nextSibling
+            img2 =  button3.nextSibling
+            console.log(button3.nextSibling)
+            key = button['id']
+            x = prompt('给我一个网址')
             hash[key] = x
-            localStorage.setItem('web', JSON.stringify(hash))
+           img2.src = 'http://'+x + './favicon.ico'
+           console.log(img2.src)
+           img2.onerror = function(xxx){
+            xxx.target.src = 'https://i.loli.net/2017/11/13/5a092f5e689ec.png'
+        }
+           localStorage.setItem('web', JSON.stringify(hash))
         }
         index2=index2+1
     }
@@ -65,6 +85,5 @@ while(index< keys['length']){
  document.onkeypress = function(xzkjcnxlkcjlk){
    key = xzkjcnxlkcjlk['key']
    website =hash[key]
-   console.log(website)
    window.open('http://'+website, '_blank')
 }//监听键盘事件，按键时候将所需要的网址弄出来，在新的窗口打开网址。

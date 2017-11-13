@@ -11,9 +11,11 @@ a{
     text-decoration: none;
 }
 body{
-    background-image: url(./girl.png);
+    height: 100vh;
+    background: gray url(./meitu.jpg) no-repeat center  center;
     background-size: cover;
 }
+
 nav{
     border: 1px red solid;  
     padding: 50px ;
@@ -39,42 +41,50 @@ nav{
     background-color: white;
     padding: 1px 0px;
 }
-kbd{
-    background-color: rgb(252, 252, 252);
-    width: auto;
-    height: auto;
+.key{
     display: inline-block;
+    width: 70px;
+    height: 52px;
+    background: #FCFCFC; 
+    color: #767C80;
+    font-size: 23px;
+    font-family: kai;
+    border-radius: 7px;
     text-transform: uppercase;
-    margin-left: 10px;
-    margin-top: 20px;
-    border-radius: 6px;
-    padding: 20px 25px;
     position: relative;
-    box-shadow: 0px 5px 9px 0px rgba(221,221,221,1);
-    transition: all  0.3s;
+    margin: 15px 10px;
+    box-shadow:  0px 0px 0px 1px rgba(95,97,98,1) ,0px 2px 0px 2px rgba(50,51,52,1),0px 3px 1px 3px rgba(33,33,33,1);
+
 }
-#edit,#delete{
+#delete{
+    padding: 0px   6px;
     position: absolute;
-    padding-bottom: 2px;
     border-radius: 3px;
-    width: 1em;
-    height: 1em;
-    background-color: orange;
+    background-color: #C6C9CD;
     display: none;
+   
 }
 
 #delete{
-    top: 2px;
-    left: 3px;
+    font-size: 5px;
+    top: 6px;
+    left: 5px;
 }
-#edit{
-    top: 2px;
-    left: 20px;
+kbd >button{
+    font-size: 12px;
+    font-family: kai;
+    border: 0;
+    padding: 0px   5px;
+    position: absolute;
+    border-radius: 3px;
+    background-color: #C6C9CD;
+    display: none;
+    font-size: 5px;
+    top: 6px;
+    left: 46px;
 }
-kbd:hover{
-    box-shadow: 0px -1px 9px 5px rgba(221,221,221,1);
-}
-kbd:hover #edit{
+
+kbd:hover >button{
     display: inline-block;
    
 }
@@ -84,20 +94,36 @@ kbd:hover #delete{
 }
 main{
     text-align: center;
-    margin-top: 300px;
 }
-.main{
+#main{
     display: inline-block;
+    margin-top: 200px;
+   
 }
 main div:nth-child(1){
-margin-left: 4em;
+margin-left: 0px;
 }
 main div:nth-child(2){
-    margin-left: 4em;
+    margin-left: 100px;
 }
 main div:nth-child(3){
-    margin-left: 4em;
+    margin-left: 80px;
 }
 main div:nth-child(4){
-    margin-left:4em    
+    margin-left:30px;   
 }
+.key img{
+    width: 16px;
+    height: 16px;
+}
+.key .text{
+    position: absolute;
+    left: 30px;
+    top: 9px; 
+}
+.key img{
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+}
+
