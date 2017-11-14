@@ -9,16 +9,14 @@ var  hash = {
     '2': '163.com',
     '3': 'qq.com',
     '5': 'tianya.cn',
-    '6': 'zhifubao.com',
     'q': 'qq.com',
     'w': 'weibo.com',
     't': 'taobao.com',
     'i': 'iqiyi.com',
-    'a': 'amazon.com',
+    'a': 'acfun.cn',
     'd': 'douban.com',
-    'f': 'fenghuang.com',
-    'j': 'jindong.com',
-    'z': 'zhilian.com',
+    'j': 'jd.com',
+    'z': 'zhihu.com',
 }
 function getFromeloclastorage(name){
    return JSON.parse(localStorage.getItem(name)|| 'null')
