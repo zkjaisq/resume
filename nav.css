@@ -2,6 +2,19 @@
     margin: 0;
     padding: 0;
 }
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+a{
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    background: gray url(https://i.loli.net/2017/11/14/5a0a6c23a8131.jpg) no-repeat center  center;
+    background-size: cover;
+}
 
 .key{
     display: inline-block;
