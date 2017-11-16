@@ -2,46 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-a{
-    text-decoration: none;
-}
-body{
-    height: 100vh;
-    background: gray url(https://i.loli.net/2017/11/14/5a0a6c23a8131.jpg) no-repeat center  center;
-    background-size: cover;
-}
 
-nav{
-    display:inline-block;
-    border: 1px red solid;  
-    padding: 50px ;
-}
-.serch{
-    padding: 6px   5px;
-    margin-right: 20px;
-}
-.icon{
-    float: left;
-    margin-left: 200px;
-}
-.form{
-   float: left;
-   margin-left: 850px;
-}
-.baidu{
-    background-color: white;
-    padding: 1px 0px;
-    margin-right: 5px;
-}
-.google{
-    background-color: white;
-    padding: 1px 0px;
-}
 .key{
     display: inline-block;
     width: 70px;
