@@ -32,7 +32,44 @@ function drawLine(x1, y1, x2, y2) {
 function Listening(click){
     var Using = false
     var LastPoint = { "x": undefined, "y": undefined }
-   click.onmousedown = function (fun) {
+    //特性检测，看是触屏设备还是pc端设备。
+if(document.body.ontouchstart!==undefined){
+    canvas.ontouchstart= function(xxx){
+        console.log(xxx)
+        var x = xxx.touches[0].clientX;
+        var z = xxx.touches[0].clientY;
+        Using=true
+        if (Eraser) {
+            context.clearRect(x-5,z-5,10,10)
+        } else {
+            LastPoint = { "x": x, "y": z }
+            drawCicle(x, z, 0.0001)
+        }
+    }
+    canvas.ontouchmove= function(xxx){
+        console.log(xxx)
+        var x =xxx.touches[0].clientX;
+        var z =xxx.touches[0].clientY;
+        if(!Using){return}
+       
+            if(Eraser){
+                Using=true
+                context.clearRect(x-5,z-5,10,10) 
+            }
+        else{
+           
+                var newPoint = { "x": x, "y": z }
+                drawCicle(x, z, 1)
+                drawLine(LastPoint.x, LastPoint.y, newPoint.x, newPoint.y)
+                LastPoint = newPoint
+           
+        }
+    }
+    canvas.ontouchend= function(){
+        Using = false
+    }
+    }else{
+    click.onmousedown = function (fun) {
         var x = fun.clientX;
         var z = fun.clientY;
         Using=true
@@ -65,6 +102,11 @@ function Listening(click){
         Using = false
     }
 }
+
+}
+
+      
+
 
 
 var Eraser = false
